@@ -8,3 +8,4 @@ class sensores(models.Model):
     Medicion=models.CharField(max_length=50)
     valor=models.IntegerField()
     fecha=models.DateField()
+
