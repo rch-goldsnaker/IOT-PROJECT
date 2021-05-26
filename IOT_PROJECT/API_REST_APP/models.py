@@ -6,6 +6,6 @@ class sensores(models.Model):
     Tag=models.CharField(max_length=8)
     Ubicacion=models.CharField(max_length=50)    
     Medicion=models.CharField(max_length=50)
-    valor=models.IntegerField()
-    fecha=models.DateField()
+    Valor=models.IntegerField()
+    Fecha=models.DateField()
 
