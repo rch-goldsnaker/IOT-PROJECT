@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '&x73lu_-i--@z@&v$#1(v#%x^9t(p=zfy^@-h1j^8f6(u-eqe8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -49,6 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'IOT_PROJECT.urls'
@@ -75,18 +76,24 @@ WSGI_APPLICATION = 'IOT_PROJECT.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+import dj_database_url
+from decouple import config
+
 DATABASES = {
     #'default': {
     #    'ENGINE': 'django.db.backends.sqlite3',
     #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #},
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iot_project',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST':'localhost',
-        'PORT': 3306,
+    # 'default': {
+    #    'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'iot_project',
+    #    'USER': 'root',
+    #    'PASSWORD': '',
+    #    'HOST':'localhost',
+    #    'PORT': 3306,
+    'default': dj_database_url.config(
+        default=config('DATABASE_URL')
+    )  
     }
 }
 
@@ -128,3 +135,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_STORAGE = 'whitenoise.storage.CompresseManifestStaticFilesStorage'
