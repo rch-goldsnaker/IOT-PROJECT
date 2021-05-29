@@ -91,10 +91,10 @@ DATABASES = {
     #    'PASSWORD': '',
     #    'HOST':'localhost',
     #    'PORT': 3306,
-    'default': dj_database_url.config(
-        default=config('DATABASE_URL')
-    )  
-    }
+    'default': {
+        dj_database_url.config(default=config('DATABASE_URL'))  
+    },
+}
 
 
 # Password validation
