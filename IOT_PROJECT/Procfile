@@ -1,1 +1,2 @@
-web: gunicorn IOT_PROJECT.wsgi
+release: python manage.py migrate --noinput
+web: gunicorn IOT_PROJECT.wsgi:application --log-file -
