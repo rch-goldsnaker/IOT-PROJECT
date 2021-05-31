@@ -100,7 +100,7 @@ DATABASES = {
 
         'PASSWORD': 'd2c4f2998c0271675b84fa7c5ecb665fdfbe70497aa2da8aafaa66ad37eb1be3',
 
-        'HOST': 'postgres://elieikyaiptjkb:d2c4f2998c0271675b84fa7c5ecb665fdfbe70497aa2da8aafaa66ad37eb1be3@ec2-54-160-96-70.compute-1.amazonaws.com:5432/dcn45adrh4j8ig',
+        'HOST': 'ec2-54-160-96-70.compute-1.amazonaws.com',
 
         'PORT': '5432',
 }
