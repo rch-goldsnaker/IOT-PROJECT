@@ -81,14 +81,28 @@ DATABASES = {
     #    'ENGINE': 'django.db.backends.sqlite3',
     #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #},
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'iot_project',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST':'localhost',
-        'PORT': 3306,
-    }
+    #'default': {
+    #   'ENGINE': 'django.db.backends.mysql',
+    #    'NAME': 'iot_project',
+    #    'USER': 'root',
+    #    'PASSWORD': '',
+    #    'HOST':'localhost',
+    #    'PORT': 3306,
+    #}
+
+     'default': {
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'dcn45adrh4j8ig',
+
+        'USER': 'elieikyaiptjkb',
+
+        'PASSWORD': 'd2c4f2998c0271675b84fa7c5ecb665fdfbe70497aa2da8aafaa66ad37eb1be3',
+
+        'HOST': 'postgres://elieikyaiptjkb:d2c4f2998c0271675b84fa7c5ecb665fdfbe70497aa2da8aafaa66ad37eb1be3@ec2-54-160-96-70.compute-1.amazonaws.com:5432/dcn45adrh4j8ig',
+
+        'PORT': '5432',
 }
 
 
