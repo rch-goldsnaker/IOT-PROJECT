@@ -92,7 +92,7 @@ DATABASES = {
 
      'default': {
 
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+       'ENGINE': 'django.db.backends.postgresql_psycopg2',
 
         'NAME': 'dcn45adrh4j8ig',
 
@@ -103,6 +103,7 @@ DATABASES = {
         'HOST': 'ec2-54-160-96-70.compute-1.amazonaws.com',
 
         'PORT': '5432',
+     }
 }
 
 
